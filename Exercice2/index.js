@@ -1,5 +1,23 @@
 // Créez votre fonction ici
 
+function calculate(int1, int2, operand) {
+    switch (operand) {
+        case '+':
+            return int1 + int2;
+        case '-':
+            return int1 - int2;
+        case '*':
+            return int1 * int2;
+        case '/':
+            if (int2 === 0) {
+                return "Division by zero is not allowed";
+            }
+            return int1 / int2;
+        default:
+            return "Invalid operator";
+    }
+}
+
 // Exemples d'utilisation de la fonction
 console.log(calculate(5, 3, '+'));   // Affiche 8
 console.log(calculate(10, 4, '-'));  // Affiche 6
