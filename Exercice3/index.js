@@ -1,4 +1,11 @@
 // Créez votre fonction ici
+function calculateAverage(numberArray) {
+    if (!numberArray || numberArray.length === 0) {
+        return 'No numbers to calculate average'
+    }
+    const sum = numberArray.reduce((acc, num) => acc + num, 0)
+    return sum / numberArray.length
+}
 
 // Exemples d'utilisation de la fonction
 console.log(calculateAverage([5, 10, 15])) // retourne 10
