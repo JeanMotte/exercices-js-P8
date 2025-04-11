@@ -1,18 +1,22 @@
 // Créez votre fonction ici
 
 function calculate(int1, int2, operand) {
+    // Vérifiez que les deux premiers arguments sont des nombres
+    const numberInt1 = Number(int1);
+    const numberInt2 = Number(int2);
+
     switch (operand) {
         case '+':
-            return int1 + int2;
+            return numberInt1 + numberInt2;
         case '-':
-            return int1 - int2;
+            return numberInt1 - numberInt2;
         case '*':
-            return int1 * int2;
+            return numberInt1 * numberInt2;
         case '/':
-            if (int2 === 0) {
+            if (numberInt2 === 0) {
                 return "Division by zero is not allowed";
             }
-            return int1 / int2;
+            return numberInt1 / numberInt2;
         default:
             return "Invalid operator";
     }
